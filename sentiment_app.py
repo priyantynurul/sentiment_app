@@ -3,6 +3,7 @@ import pandas as pd
 import numpy as np
 import pickle
 from Sastrawi.Stemmer.StemmerFactory import StemmerFactory
+import emoji
 
 # Load custom NLP model and tokenizer
 # @st.cache_resource
