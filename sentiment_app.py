@@ -3,7 +3,6 @@ import pandas as pd
 import numpy as np
 import pickle
 from Sastrawi.Stemmer.StemmerFactory import StemmerFactory
-from sklearn.externals import joblib
 
 # Load custom NLP model and tokenizer
 # @st.cache_resource
@@ -169,7 +168,7 @@ def preprocess_text(text):
 
 # Load the trained model (ensure model.pkl exists)
 with open('tfidf_rf_tuned_model.pkl', 'rb') as model_file:
-    model = joblib.load(model_file)
+    model = pickle.load(model_file)
 
 
 # Prediction function
