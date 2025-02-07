@@ -3,7 +3,6 @@ import pandas as pd
 import numpy as np
 import pickle
 from Sastrawi.Stemmer.StemmerFactory import StemmerFactory
-import emoji
 
 # Load custom NLP model and tokenizer
 # @st.cache_resource
@@ -119,7 +118,7 @@ def text_bersih(text):
     text = re.sub(r'@\w+', '', text)
 
     # Menghapus emoji
-    text = emoji.replace_emoji(text, '')
+    # text = emoji.replace_emoji(text, '')
 
     # Menghapus karakter khusus dan tanda baca
     text = re.sub(r'[^\w\s]', '', text)
